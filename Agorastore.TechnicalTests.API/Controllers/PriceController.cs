@@ -20,7 +20,15 @@ namespace Agorastore.TechnicalTests.API.Controllers
             _priceService = priceService;
         }
 
+        /// <summary>
+        /// Calcul du prix de vente.
+        /// </summary>
+        /// <param name="initialAmount">Le prix initial, cette valeur devrait être un nombre double.</param>
+        /// <param name="includeVAT">TVA incluse ou non, cette valeur de type boolean</param>
+        /// <returns>Le prix de vente calculé.</returns>
         [HttpPost("CalculateSellingPrice")]
+        [ProducesResponseType(typeof(double), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
         public ActionResult<double> CalculateSellingPrice([FromBody] PriceCalculationModelApi model)
         {
             try
