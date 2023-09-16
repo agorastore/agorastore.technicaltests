@@ -13,9 +13,28 @@ namespace Agorastore.TechnicalTests.API.Services
             _priceOptions = priceOptions.Value;
         }
 
-        public double CalculateSellingPrice(double initialPrice)
+        public double CalculateSellingPriceHT(double initialPrice)
         {
-            return initialPrice + (initialPrice * _priceOptions.CommissionRate / 100);
+            if (initialPrice <= 0)
+            {
+                throw new ArgumentException("Initial price must be greater than 0.", nameof(initialPrice));
+            }
+            return CalculatePriceRate(initialPrice, _priceOptions.CommissionRate);
+        }
+
+        public double CalculateSellingPriceTTC(double initialPrice)
+        {
+            if (initialPrice <= 0)
+            {
+                throw new ArgumentException("Initial price must be greater than 0.", nameof(initialPrice));
+            }
+            double sellingPriceHT = CalculateSellingPriceHT(initialPrice);
+            return CalculatePriceRate(sellingPriceHT, _priceOptions.VATRate);
+        }
+
+        private static double CalculatePriceRate(double price, double rate)
+        {
+            return price + (price * rate / 100);
         }
     }
 }

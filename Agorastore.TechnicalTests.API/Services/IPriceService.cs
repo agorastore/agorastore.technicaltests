@@ -3,6 +3,8 @@ namespace Agorastore.TechnicalTests.API.Services
 {
 	public interface IPriceService
 	{
-        public double CalculateSellingPrice(double initialPrice);
+        public double CalculateSellingPriceHT(double initialPrice);
+
+        public double CalculateSellingPriceTTC(double initialPrice);
     }
 }
