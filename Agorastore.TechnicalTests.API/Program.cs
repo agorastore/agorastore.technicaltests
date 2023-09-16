@@ -1,7 +1,11 @@
 
+using Agorastore.TechnicalTests.API.Config;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
+
+builder.Services.Configure<PriceOptions>(builder.Configuration.GetSection("PriceOptions"));
 
 builder.Services.AddEndpointsApiExplorer();
 
