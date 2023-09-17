@@ -28,5 +28,9 @@ Agorastore.TechnicalTests.API/bin/**
 Agorastore.TechnicalTests.Tests/obj/**
 Agorastore.TechnicalTests.Tests/bin/**
 agorastore.technicaltests.ui/node_modules/**
+agorastore.technicaltests.ui/obj/**
 .vs/Agorastore.TechnicalTests/v17/.suo
+.vs/Agorastore.TechnicalTests/v17/**
 *.vsidx
+Agorastore.TechnicalTests/obj/**
+Agorastore.TechnicalTests/bin/Debug/**
