@@ -7,8 +7,9 @@ function App() {
     const [includeVat, setIncludeVAT] = useState(false);
 
     function resetData(): void {
+        setInitialPrice(0);
         setSellingPrice(0);
-        setIncludeVAT(false);
+        setIncludeVAT(() => false);
     }
 
     function toggleIncludeVAT(): void {
@@ -20,9 +21,9 @@ function App() {
     }
 
     function calculatePricing() {
-        fetch(`https://localhost:7260/calculate-pricing?initialPrice=${sellingPrice}&includeVAT=${includeVat}`)
+        fetch(`https://localhost:7260/calculate-pricing?initialPrice=${initialPrice}&includeVAT=${includeVat}`)
             .then((res) => res.json())
-            .then(pricing => setSellingPrice(pricing.SellingPrice))
+            .then(pricing => setSellingPrice(pricing.sellingPrice))
     }
 
     return (
