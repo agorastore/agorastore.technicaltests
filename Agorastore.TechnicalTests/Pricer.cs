@@ -4,12 +4,14 @@ namespace Agorastore.TechnicalTests
 {
     public interface IPricer
     {
-        decimal CalculateSellingPrice(decimal initialPrice);
+        decimal CalculateSellingPrice(decimal initialPrice, bool includeVat = false);
     }
 
     public record PricerConfiguration(decimal Commission);
     public class Pricer: IPricer
     {
+        private static readonly decimal VAT = 0.2m;
+
         private readonly IOptionsSnapshot<PricerConfiguration> _configuration;
 
         public Pricer(IOptionsSnapshot<PricerConfiguration> configuration)
@@ -17,9 +19,10 @@ namespace Agorastore.TechnicalTests
             _configuration = configuration;
         }
 
-        public decimal CalculateSellingPrice(decimal initialPrice)
+        public decimal CalculateSellingPrice(decimal initialPrice, bool includeVat = false)
         {
-            return initialPrice + (initialPrice * _configuration.Value.Commission);
+            var sellingPrice = initialPrice + (initialPrice * _configuration.Value.Commission);
+            return includeVat ? sellingPrice + (sellingPrice * VAT) : sellingPrice;
         }
     }
 }
