@@ -1,4 +1,4 @@
-﻿
+﻿using Microsoft.Extensions.Options;
 
 namespace Agorastore.TechnicalTests.Domain.Tests
 {
@@ -7,11 +7,17 @@ namespace Agorastore.TechnicalTests.Domain.Tests
         [Fact]
         public void Price_should_be_compute_according_to_pricing_formula()
         {
-            var pricer = new Pricer();
+            decimal commission = 0.2m;
+            decimal initialPrice = 10.00m;
+            
+            var optionsSnapshot = Substitute.For<IOptionsSnapshot<PricerConfiguration>>();
+            optionsSnapshot.Value.Returns(new PricerConfiguration(commission));
 
-            var sellingPrice = pricer.CalculateSellingPrice(10.00m);
+            var pricer = new Pricer(optionsSnapshot);
 
-            sellingPrice.Should().Be(10.00m + (10.00m * 0.2m));
+            var sellingPrice = pricer.CalculateSellingPrice(initialPrice);
+
+            sellingPrice.Should().Be(initialPrice + (initialPrice * commission));
         }
     }
 }
