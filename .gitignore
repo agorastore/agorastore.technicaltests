@@ -21,3 +21,12 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Local stuff
+Agorastore.TechnicalTests.API/obj/**
+Agorastore.TechnicalTests.API/bin/**
+Agorastore.TechnicalTests.Tests/obj/**
+Agorastore.TechnicalTests.Tests/bin/**
+agorastore.technicaltests.ui/node_modules/**
+.vs/Agorastore.TechnicalTests/v17/.suo
+*.vsidx

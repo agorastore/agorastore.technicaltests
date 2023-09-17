@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Agorastore.TechnicalTests.Tests
-build_property.ProjectDir = C:\Sources\Agorastore.TechnicalTests\Agorastore.TechnicalTests.Tests\
+build_property.ProjectDir = C:\Users\lucas\repos\agorastore.technicaltests\Agorastore.TechnicalTests.Tests\

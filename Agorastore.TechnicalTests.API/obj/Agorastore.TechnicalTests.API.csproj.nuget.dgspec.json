@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Sources\\Agorastore.TechnicalTests\\Agorastore.TechnicalTests.API\\Agorastore.TechnicalTests.API.csproj": {}
+    "C:\\Users\\lucas\\repos\\agorastore.technicaltests\\Agorastore.TechnicalTests.API\\Agorastore.TechnicalTests.API.csproj": {}
   },
   "projects": {
-    "C:\\Sources\\Agorastore.TechnicalTests\\Agorastore.TechnicalTests.API\\Agorastore.TechnicalTests.API.csproj": {
+    "C:\\Users\\lucas\\repos\\agorastore.technicaltests\\Agorastore.TechnicalTests.API\\Agorastore.TechnicalTests.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Sources\\Agorastore.TechnicalTests\\Agorastore.TechnicalTests.API\\Agorastore.TechnicalTests.API.csproj",
+        "projectUniqueName": "C:\\Users\\lucas\\repos\\agorastore.technicaltests\\Agorastore.TechnicalTests.API\\Agorastore.TechnicalTests.API.csproj",
         "projectName": "Agorastore.TechnicalTests.API",
-        "projectPath": "C:\\Sources\\Agorastore.TechnicalTests\\Agorastore.TechnicalTests.API\\Agorastore.TechnicalTests.API.csproj",
-        "packagesPath": "C:\\Users\\poumarat\\.nuget\\packages\\",
-        "outputPath": "C:\\Sources\\Agorastore.TechnicalTests\\Agorastore.TechnicalTests.API\\obj\\",
+        "projectPath": "C:\\Users\\lucas\\repos\\agorastore.technicaltests\\Agorastore.TechnicalTests.API\\Agorastore.TechnicalTests.API.csproj",
+        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucas\\repos\\agorastore.technicaltests\\Agorastore.TechnicalTests.API\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\poumarat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
