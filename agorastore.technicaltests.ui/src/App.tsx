@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+    const [sellingPrice, setSellingPrice] = useState();
+
+
     return (
         <div className="App">
             <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
+                <h1>Pricing</h1>
             </header>
+
+            <form>
+                <label htmlFor="initialPrice">Initial Price</label>
+                <input id="initialPrice" type="number"/>
+                <label><input type="checkbox"/>Include VAT</label>
+                <button>Reset</button>
+                <button>Calculate</button>
+            </form>
+
+            <div>
+                {sellingPrice && `Selling price is ${sellingPrice}`}
+            </div>
         </div>
     );
 }
