@@ -22,7 +22,12 @@ namespace Agorastore.TechnicalTests
         public decimal CalculateSellingPrice(decimal initialPrice, bool includeVat = false)
         {
             var sellingPrice = initialPrice + (initialPrice * _configuration.Value.Commission);
-            return includeVat ? sellingPrice + (sellingPrice * VAT) : sellingPrice;
+
+            return includeVat switch
+            {
+                true => sellingPrice + (sellingPrice * VAT),
+                false => sellingPrice
+            };
         }
     }
 }

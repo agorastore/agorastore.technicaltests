@@ -4,36 +4,37 @@ namespace Agorastore.TechnicalTests.Domain.Tests
 {
     public class PricerTests
     {
-        [Fact]
-        public void Selling_price_should_be_compute_according_to_pricing_formula()
+        private readonly decimal _commission;
+        private readonly IPricer _pricer;
+
+        public PricerTests()
         {
-            decimal commission = 0.2m;
-            decimal initialPrice = 10.00m;
+            _commission = 0.2m;
             
             var optionsSnapshot = Substitute.For<IOptionsSnapshot<PricerConfiguration>>();
-            optionsSnapshot.Value.Returns(new PricerConfiguration(commission));
+            optionsSnapshot.Value.Returns(new PricerConfiguration(_commission));
 
-            var pricer = new Pricer(optionsSnapshot);
+            _pricer = new Pricer(optionsSnapshot);
+        }
 
-            var sellingPrice = pricer.CalculateSellingPrice(initialPrice);
+        [Fact]
+        public void Selling_price_should_be_computed_according_to_pricing_formula()
+        {
+            decimal initialPrice = 10.00m;
 
-            sellingPrice.Should().Be(initialPrice + (initialPrice * commission));
+            var sellingPrice = _pricer.CalculateSellingPrice(initialPrice);
+
+            sellingPrice.Should().Be(initialPrice + (initialPrice * _commission));
         }
 
         [Fact]
         public void Selling_price_should_include_vat_when_requested()
         {
-            decimal commission = 0.2m;
             decimal initialPrice = 10.00m;
 
-            var optionsSnapshot = Substitute.For<IOptionsSnapshot<PricerConfiguration>>();
-            optionsSnapshot.Value.Returns(new PricerConfiguration(commission));
+            var sellingPriceWithVAT = _pricer.CalculateSellingPrice(initialPrice, includeVat: true);
 
-            var pricer = new Pricer(optionsSnapshot);
-
-            var sellingPriceWithVAT = pricer.CalculateSellingPrice(initialPrice, includeVat: true);
-
-            var sellingPrice = initialPrice + (initialPrice * commission);
+            var sellingPrice = initialPrice + (initialPrice * _commission);
 
             sellingPriceWithVAT.Should().Be(sellingPrice * 1.20m);
         }
