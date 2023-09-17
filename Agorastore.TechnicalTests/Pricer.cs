@@ -7,7 +7,11 @@ namespace Agorastore.TechnicalTests
         decimal CalculateSellingPrice(decimal initialPrice, bool includeVat = false);
     }
 
-    public record PricerConfiguration(decimal Commission);
+    public class PricerConfiguration 
+    {
+        public decimal Commission { get; init; }
+    }
+
     public class Pricer: IPricer
     {
         private static readonly decimal VAT = 0.2m;

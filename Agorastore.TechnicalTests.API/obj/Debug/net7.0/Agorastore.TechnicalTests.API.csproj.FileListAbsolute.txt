@@ -49,3 +49,8 @@ C:\Users\lucas\repos\agorastore.technicaltests\Agorastore.TechnicalTests.API\obj
 C:\Users\lucas\repos\agorastore.technicaltests\Agorastore.TechnicalTests.API\obj\Debug\net7.0\Agorastore.TechnicalTests.API.pdb
 C:\Users\lucas\repos\agorastore.technicaltests\Agorastore.TechnicalTests.API\obj\Debug\net7.0\Agorastore.TechnicalTests.API.genruntimeconfig.cache
 C:\Users\lucas\repos\agorastore.technicaltests\Agorastore.TechnicalTests.API\obj\Debug\net7.0\ref\Agorastore.TechnicalTests.API.dll
+C:\Users\lucas\repos\agorastore.technicaltests\Agorastore.TechnicalTests.API\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\lucas\repos\agorastore.technicaltests\Agorastore.TechnicalTests.API\bin\Debug\net7.0\Agorastore.TechnicalTests.dll
+C:\Users\lucas\repos\agorastore.technicaltests\Agorastore.TechnicalTests.API\bin\Debug\net7.0\Agorastore.TechnicalTests.pdb
+C:\Users\lucas\repos\agorastore.technicaltests\Agorastore.TechnicalTests.API\obj\Debug\net7.0\Agorastore.TechnicalTests.API.csproj.AssemblyReference.cache
+C:\Users\lucas\repos\agorastore.technicaltests\Agorastore.TechnicalTests.API\obj\Debug\net7.0\Agorastore.TechnicalTests.API.csproj.CopyComplete

@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Sb9l4e170NfgICcAAkGHPxgzS8+/ntembNA4SgAYqtQYjj2X+pSH8OSUHo75KMseZYchAP6cyBMILB5K5lUqHQ==",
+  "dgSpecHash": "ROVT4GHidSJOBaVbyoaokoJGnGc1fRNdk01PZPC6qHrtrecfDhdXh23xKE+kV4iC1/OP571hzEw7+gJcITFvwA==",
   "success": true,
   "projectFilePath": "C:\\Users\\lucas\\repos\\agorastore.technicaltests\\Agorastore.TechnicalTests.API\\Agorastore.TechnicalTests.API.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\lucas\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\lucas\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\microsoft.extensions.options.7.0.1.nupkg.sha512",
+    "C:\\Users\\lucas\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
