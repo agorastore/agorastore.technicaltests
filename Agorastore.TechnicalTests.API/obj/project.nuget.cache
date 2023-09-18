@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wYWoDo8rWwZ2/UiX/+38lpRw9FvvESy2E+9nUjyj3No6Dmxs5UmYa8j/2oJRVhyQKc7U4xm66FMDScJYTJCIzg==",
+  "dgSpecHash": "5QJvttnDyi9t9Vqgq8qp1EG4TpqLxT79VwSOzz4VV6hfmIkfmmScDYNHn+0jYKPaMJk7MvswPi+e/06T3wZDdA==",
   "success": true,
-  "projectFilePath": "C:\\Sources\\Agorastore.TechnicalTests\\Agorastore.TechnicalTests.API\\Agorastore.TechnicalTests.API.csproj",
+  "projectFilePath": "C:\\Users\\MAEB\\Source\\Repos\\agorastore\\agorastore.technicaltests\\Agorastore.TechnicalTests.API\\Agorastore.TechnicalTests.API.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
