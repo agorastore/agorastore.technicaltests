@@ -18,7 +18,7 @@ export class FormulaireCalculPrixVente extends Component<{}, { montantInitial: n
 
     Reset(e: any) {
         e.preventDefault();
-        let element = document.getElementById("labelResult");
+        let element = document.getElementById("label-result");
         if(element != null) element.style.display = 'none';
         this.setState({
             montantInitial: 0,
@@ -68,7 +68,7 @@ export class FormulaireCalculPrixVente extends Component<{}, { montantInitial: n
                         </label></div>
                         <div><button className="btn btn-secondary" onClick={this.Reset}>r&eacute;initialiser</button></div>
     
-                        <div><label id="labelResult">{this.DonneAffichage()}</label></div>
+                        <div><span id="label-result">{this.DonneAffichage()}</span></div>
                     </div>
                 </form>
             </div>
@@ -88,7 +88,7 @@ export class FormulaireCalculPrixVente extends Component<{}, { montantInitial: n
             .then((response) => response.json())
             .then((data) => {
                 this.setState({ montantCalcule: data });
-                let element = document.getElementById("labelResult");
+                let element = document.getElementById("label-result");
                 if (element != null) element.style.display = 'inline'; })
             .catch((error) =>
                 alert("erreur : " + error) 

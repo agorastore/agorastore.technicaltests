@@ -93,6 +93,7 @@ input:checked + .slider:before {
     align-items: center;
 }
 
-.inputResult {
-  width:100%;
+#label-result {
+    display:none;
+    width: 100%;
 }
